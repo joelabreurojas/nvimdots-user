@@ -4,7 +4,9 @@ return function()
 		detection_methods = { "pattern" },
 		patterns = { "=tcc_monorepo", "go.mod", ".git" },
 		silent_chdir = true,
-		ignore_lsp = { "null-ls", "copilot" },
+		lsp = {
+			ignore = { "null-ls", "copilot" },
+		},
 		exclude_dirs = {},
 		show_hidden = false,
 		scope_chdir = "global",
