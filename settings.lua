@@ -14,7 +14,7 @@ settings["format_disabled_dirs"] = {}
 
 settings["background"] = "dark"
 
-settings["transparent_background"] = false
+settings["transparent_background"] = true
 
 settings["load_big_files_faster"] = true
 
@@ -52,7 +52,7 @@ settings["treesitter_deps"] = function()
 		"html",
 		"javascript",
 		"json",
-		"jsonc",
+		-- "jsonc",
 		-- "latex",
 		"lua",
 		"make",
@@ -82,6 +82,6 @@ settings["neovide_config"] = {
 
 settings["search_backend"] = "fzf"
 
-settings["chat_lang"] = "Chinese"
+settings["chat_lang"] = "English"
 
 return settings
