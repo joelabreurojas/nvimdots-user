@@ -43,16 +43,6 @@ tool["nvim-neotest/neotest"] = {
 	},
 	config = require("user.configs.tool.neotest"),
 }
-tool["lowitea/aw-watcher.nvim"] = {
-	lazy = true,
-	event = "VeryLazy",
-	opts = {
-		aw_server = {
-			host = "127.0.0.1",
-			port = 5600,
-		},
-	},
-}
 local leet_arg = "lc"
 tool["kawre/leetcode.nvim"] = {
 	lazy = leet_arg ~= vim.fn.argv()[1],
