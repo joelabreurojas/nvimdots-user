@@ -3,11 +3,11 @@ return function()
 		status = {
 			enabled = true,
 			signs = true,
-			virtual_text = true, -- 显示虚拟文本状态
+			virtual_text = true,
 		},
 		output = {
 			enabled = true,
-			open_on_run = "short", -- 运行时自动打开输出
+			open_on_run = "short", -- Automatically open output during runtime
 		},
 		output_panel = {
 			enabled = true,
