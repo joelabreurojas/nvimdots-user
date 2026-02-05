@@ -4,7 +4,7 @@ local options = {
 	cursorcolumn = false,
 	wrap = true,
 	splitkeep = "cursor",
-	equalalways = true,
+	equalalways = false,
 	swapfile = false,
 }
 
