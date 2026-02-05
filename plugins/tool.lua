@@ -39,6 +39,7 @@ tool["nvim-neotest/neotest"] = {
 		"fredrikaverpil/neotest-golang",
 		"leoluz/nvim-dap-go",
 		"rouge8/neotest-rust",
+		"nvim-neotest/neotest-python",
 	},
 	config = require("user.configs.tool.neotest"),
 }
@@ -57,11 +58,9 @@ tool["kawre/leetcode.nvim"] = {
 	lazy = leet_arg ~= vim.fn.argv()[1],
 	opts = {
 		arg = leet_arg,
-		lang = "cpp",
+		lang = "c",
 		cn = { -- leetcode.cn
-			enabled = true, ---@type boolean
-			translator = false, ---@type boolean
-			translate_problems = true, ---@type boolean
+			enabled = false, ---@type boolean
 		}, -- configuration goes here
 		description = {
 			position = "left",
@@ -69,9 +68,9 @@ tool["kawre/leetcode.nvim"] = {
 			show_stats = true,
 		},
 		injector = {
-			["cpp"] = {
-				before = { "#include <vector>", "#include <iostream>", "using namespace std;" },
-				after = "int main() { Solution s; return 0; }",
+			["c"] = {
+				before = { "#include <stdio.h>", "#include <stdlib.h>", "#include <stdbool.h>" },
+				after = "int main() { return 0; }",
 			},
 		},
 	},
