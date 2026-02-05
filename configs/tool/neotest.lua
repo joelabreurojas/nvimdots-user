@@ -36,6 +36,11 @@ return function()
 				},
 				dap_adapter = "codelldb",
 			}),
+			require("neotest-python")({
+				runner = "pytest",
+				python = ".venv/bin/python" or "python3",
+				dap = { adapter = "python" },
+			}),
 		},
 	})
 end
