@@ -1,17 +1,5 @@
 local completion = {}
 
-completion["Exafunction/codeium.nvim"] = {
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-		"hrsh7th/nvim-cmp",
-	},
-	config = function()
-		require("codeium").setup({
-			-- Optional: configure if you want it to behave differently
-			enable_chat = true,
-		})
-	end,
-}
 completion["ayamir/garbage-day.nvim"] = {
 	lazy = true,
 	event = "LspAttach",

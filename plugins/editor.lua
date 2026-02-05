@@ -1,5 +1,9 @@
 local editor = {}
 
+editor["Exafunction/codeium.vim"] = {
+	event = "BufEnter",
+	config = require("configs.editor.codeium"),
+}
 editor["olimorris/persisted.nvim"] = {
 	lazy = false,
 }
