@@ -9,7 +9,7 @@ local function win_info(all_tabs)
 		for _, w in ipairs(vim.api.nvim_tabpage_list_wins(tp)) do
 			local buf = vim.api.nvim_win_get_buf(w)
 			local name = vim.api.nvim_buf_get_name(buf)
-			-- 用 -(empty)- 占位
+			-- Use -(empty)- as a placeholder
 			name = name == "" and "-(empty)-" or name
 			table.insert(lines, ("  win %-3d buf %-3d  %s"):format(w, buf, name))
 		end
@@ -55,16 +55,16 @@ end, {
 })
 
 local function cleanup_fzf_windows()
-	-- 获取当前的 fzf 窗口对象
+	-- Retrieve the current fzf window object
 	local winobj = require("fzf-lua.utils").fzf_winobj()
 	if winobj then
 		winobj:close()
 	end
 
-	-- 清理上下文
+	-- Clear context
 	require("fzf-lua.utils").clear_CTX()
 
-	-- 强制清理所有可能的 fzf 相关窗口
+	-- Forcefully close all possible fzf-related windows
 	for _, win in ipairs(vim.api.nvim_list_wins()) do
 		local buf = vim.api.nvim_win_get_buf(win)
 		local bufname = vim.api.nvim_buf_get_name(buf)
@@ -74,7 +74,7 @@ local function cleanup_fzf_windows()
 	end
 end
 
--- 绑定到快捷键
+-- Assign to a shortcut key
 vim.keymap.set("n", "<leader>fc", cleanup_fzf_windows, { desc = "Cleanup fzf windows" })
 
 return M
