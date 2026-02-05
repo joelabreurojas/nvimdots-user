@@ -1,8 +1,15 @@
 local completion = {}
 
-completion["git@code.byted.org:chenjiaqi.cposture/codeverse.vim.git"] = {
+completion["Exafunction/codeium.nvim"] = {
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"hrsh7th/nvim-cmp",
+	},
 	config = function()
-		require("trae").setup()
+		require("codeium").setup({
+			-- Optional: configure if you want it to behave differently
+			enable_chat = true,
+		})
 	end,
 }
 completion["ayamir/garbage-day.nvim"] = {
